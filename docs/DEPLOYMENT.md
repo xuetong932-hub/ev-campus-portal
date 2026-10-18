@@ -11,7 +11,7 @@ Final addresses:
 | | Address |
 |---|---|
 | GitHub repository | https://github.com/xuetong932-hub/ev-campus-portal |
-| Public web app | https://xuetong-ev-campus-portal.streamlit.app |
+| Public web app | https://xuetong-ev-campus.streamlit.app |
 
 ---
 
@@ -102,10 +102,12 @@ git config http.sslBackend schannel
    | Repository | `xuetong932-hub/ev-campus-portal` |
    | Branch | `main` |
    | Main file path | `app.py` |
-   | App URL (optional) | `xuetong-ev-campus-portal` |
+   | App URL (optional) | `xuetong-ev-campus` |
 
    If the App URL is taken, Streamlit shows a warning; pick another name and
-   update the links in `README.md` afterwards.
+   update the links in `README.md` afterwards. Streamlit also rejects custom
+   subdomains that contain the word **"portal"**, which is why this project uses
+   `xuetong-ev-campus` rather than the repository name.
 5. Click **Advanced settings**:
    * **Python version: 3.12** ← required, because `ev_model.pkl` was trained on 3.12.
    * Secrets: leave empty (the app needs none).
@@ -117,7 +119,7 @@ git config http.sslBackend schannel
 
 ### Check the live app
 
-Open https://xuetong-ev-campus-portal.streamlit.app in a **private/incognito window**
+Open https://xuetong-ev-campus.streamlit.app in a **private/incognito window**
 (to be sure it works for people who are not signed in to Streamlit) and test:
 
 - [ ] The sign-in page shows the moving stars and the charging-station photo.
