@@ -1,0 +1,20 @@
+[global]
+developmentMode = false
+
+[client]
+toolbarMode = "viewer"
+
+[theme]
+base = "dark"
+primaryColor = "#4cc9f0"
+backgroundColor = "#05080f"
+secondaryBackgroundColor = "#0d1525"
+textColor = "#e8eef7"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+enableCORS = true
