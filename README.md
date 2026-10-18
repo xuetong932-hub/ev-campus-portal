@@ -9,7 +9,7 @@ through a secure, multi-page Streamlit web portal.
 
 | | |
 |---|---|
-| **Live app** | https://xuetong-ev-campus-portal.streamlit.app |
+| **Live app** | https://xuetong-ev-campus.streamlit.app |
 | **Repository** | https://github.com/xuetong932-hub/ev-campus-portal |
 | **Author** | Xue Tong |
 | **Stack** | Python 3.12 · pandas · NumPy · scikit-learn · Matplotlib · Seaborn · Streamlit |
@@ -337,10 +337,10 @@ The full illustrated walkthrough is in **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md
 2. Go to **https://share.streamlit.io** → sign in with GitHub → **Create app** →
    *Deploy a public app from GitHub*.
 3. Repository `xuetong932-hub/ev-campus-portal`, branch `main`, main file `app.py`,
-   App URL `xuetong-ev-campus-portal`.
+   App URL `xuetong-ev-campus`.
 4. **Advanced settings → Python 3.12** → **Deploy**.
 
-The app is then public at **https://xuetong-ev-campus-portal.streamlit.app**.
+The app is then public at **https://xuetong-ev-campus.streamlit.app**.
 
 `requirements.txt` pins every package to the version used to train the model.
 Two pins matter in particular:
