@@ -1,0 +1,179 @@
+{
+  "selected_model": "DecisionTree",
+  "selection_rule": "highest 5-fold CV macro F1 on training data (test set not used)",
+  "features": [
+    "Charger_Type",
+    "User_Type",
+    "Start_Hour",
+    "Peak_Hour_Flag",
+    "Duration_Mins",
+    "Energy_kWh",
+    "Overstay_Mins",
+    "Battery_Temp_C"
+  ],
+  "numeric_features": [
+    "Start_Hour",
+    "Peak_Hour_Flag",
+    "Duration_Mins",
+    "Energy_kWh",
+    "Overstay_Mins",
+    "Battery_Temp_C"
+  ],
+  "categorical_features": [
+    "Charger_Type",
+    "User_Type"
+  ],
+  "labels": [
+    "Normal",
+    "Overheated",
+    "Grid_Surge"
+  ],
+  "peak_rule": "12 <= Start_Hour <= 17",
+  "train_rows": 960,
+  "test_rows": 240,
+  "test_metrics": [
+    {
+      "model": "DecisionTree",
+      "accuracy": 0.7958,
+      "precision_macro": 0.8,
+      "recall_macro": 0.9013,
+      "f1_macro": 0.8058,
+      "precision_weighted": 0.9104,
+      "recall_weighted": 0.7958,
+      "f1_weighted": 0.8222,
+      "cv_f1_macro": 0.8255,
+      "cv_f1_std": 0.0182,
+      "selected": true,
+      "train_accuracy": 0.824
+    },
+    {
+      "model": "RandomForest",
+      "accuracy": 0.7958,
+      "precision_macro": 0.8,
+      "recall_macro": 0.9013,
+      "f1_macro": 0.8058,
+      "precision_weighted": 0.9104,
+      "recall_weighted": 0.7958,
+      "f1_weighted": 0.8222,
+      "cv_f1_macro": 0.8203,
+      "cv_f1_std": 0.023,
+      "selected": false,
+      "train_accuracy": 0.8219
+    },
+    {
+      "model": "KNN",
+      "accuracy": 0.8,
+      "precision_macro": 0.7432,
+      "recall_macro": 0.6693,
+      "f1_macro": 0.6969,
+      "precision_weighted": 0.8101,
+      "recall_weighted": 0.8,
+      "f1_weighted": 0.8019,
+      "cv_f1_macro": 0.6666,
+      "cv_f1_std": 0.0422,
+      "selected": false,
+      "train_accuracy": 1.0
+    },
+    {
+      "model": "Baseline_MostFrequent",
+      "accuracy": 0.75,
+      "precision_macro": 0.25,
+      "recall_macro": 0.3333,
+      "f1_macro": 0.2857,
+      "precision_weighted": 0.5625,
+      "recall_weighted": 0.75,
+      "f1_weighted": 0.6429,
+      "cv_f1_macro": null,
+      "cv_f1_std": null,
+      "selected": false,
+      "train_accuracy": null
+    }
+  ],
+  "best_test_accuracy": 0.7958,
+  "best_test_f1_macro": 0.8058,
+  "confusion_matrix": {
+    "labels": [
+      "Normal",
+      "Overheated",
+      "Grid_Surge"
+    ],
+    "matrix": [
+      [
+        132,
+        0,
+        48
+      ],
+      [
+        0,
+        26,
+        0
+      ],
+      [
+        1,
+        0,
+        33
+      ]
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "Battery_Temp_C",
+      "importance": 0.3399,
+      "std": 0.0227
+    },
+    {
+      "feature": "Peak_Hour_Flag",
+      "importance": 0.1663,
+      "std": 0.0184
+    },
+    {
+      "feature": "User_Type",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Charger_Type",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Start_Hour",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Duration_Mins",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Energy_kWh",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Overstay_Mins",
+      "importance": 0.0,
+      "std": 0.0
+    }
+  ],
+  "ceiling_analysis": {
+    "overheated_rule_matches": 1.0,
+    "grid_surge_outside_peak": 0,
+    "peak_window_normal_vs_surge": {
+      "Normal": 222,
+      "Grid_Surge": 172
+    },
+    "max_accuracy_possible": 0.8566666666666667,
+    "surge_precision_if_all_peak_flagged": 0.4365482233502538
+  },
+  "python_version": "3.12.15",
+  "package_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2"
+  }
+}

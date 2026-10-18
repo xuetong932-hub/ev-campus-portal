@@ -1,0 +1,9 @@
+feature,importance,std
+Battery_Temp_C,0.3399,0.0227
+Peak_Hour_Flag,0.1663,0.0184
+User_Type,0.0,0.0
+Charger_Type,0.0,0.0
+Start_Hour,0.0,0.0
+Duration_Mins,0.0,0.0
+Energy_kWh,0.0,0.0
+Overstay_Mins,0.0,0.0

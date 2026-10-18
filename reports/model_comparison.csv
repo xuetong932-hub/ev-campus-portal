@@ -1,0 +1,5 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,precision_weighted,recall_weighted,f1_weighted,cv_f1_macro,cv_f1_std,best_params,selected,train_accuracy
+DecisionTree,0.7958,0.8,0.9013,0.8058,0.9104,0.7958,0.8222,0.8255,0.0182,"{'classifier__class_weight': 'balanced', 'classifier__max_depth': 3, 'classifier__min_samples_leaf': 5}",True,0.824
+RandomForest,0.7958,0.8,0.9013,0.8058,0.9104,0.7958,0.8222,0.8203,0.023,"{'classifier__class_weight': 'balanced', 'classifier__max_depth': None, 'classifier__min_samples_leaf': 5}",False,0.8219
+KNN,0.8,0.7432,0.6693,0.6969,0.8101,0.8,0.8019,0.6666,0.0422,"{'classifier__n_neighbors': 5, 'classifier__weights': 'distance'}",False,1.0
+Baseline_MostFrequent,0.75,0.25,0.3333,0.2857,0.5625,0.75,0.6429,,,,False,

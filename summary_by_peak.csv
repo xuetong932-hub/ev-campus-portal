@@ -1,0 +1,3 @@
+Peak_Hour_Flag,Sessions,Avg_Energy_kWh,Total_Energy_kWh,Avg_Battery_Temp_C,Avg_Duration_Mins,Avg_Power_kW
+0,758,15.64,11857.45,35.13,93.13,14.42
+1,442,15.32,6772.64,34.8,94.85,13.52

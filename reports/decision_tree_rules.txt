@@ -1,0 +1,16 @@
+|--- Battery_Temp_C <= 43.0
+|   |--- Peak_Hour_Flag <= 0.5
+|   |   |--- Charger_Type_DC <= 0.5
+|   |   |   |--- class: Normal
+|   |   |--- Charger_Type_DC >  0.5
+|   |   |   |--- class: Normal
+|   |--- Peak_Hour_Flag >  0.5
+|   |   |--- Battery_Temp_C <= 23.2
+|   |   |   |--- class: Normal
+|   |   |--- Battery_Temp_C >  23.2
+|   |   |   |--- class: Grid_Surge
+|--- Battery_Temp_C >  43.0
+|   |--- Duration_Mins <= 17.5
+|   |   |--- class: Overheated
+|   |--- Duration_Mins >  17.5
+|   |   |--- class: Overheated

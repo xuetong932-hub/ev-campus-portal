@@ -1,0 +1,5 @@
+Charger_Type,Peak_Hour_Flag,Grid_Surge,Normal,Overheated
+AC,0,0.0,99.79,0.21
+AC,1,43.14,56.52,0.33
+DC,0,0.0,70.33,29.67
+DC,1,30.07,37.06,32.87

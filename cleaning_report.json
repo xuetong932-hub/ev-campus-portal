@@ -1,0 +1,84 @@
+{
+  "source_file": "ev_campus_dataset.csv",
+  "rows_before": 1200,
+  "missing_before": {
+    "Session_ID": 0,
+    "Charger_Type": 0,
+    "User_Type": 0,
+    "Start_Hour": 0,
+    "Duration_Mins": 25,
+    "Energy_kWh": 35,
+    "Overstay_Mins": 0,
+    "Battery_Temp_C": 0,
+    "Grid_Status_Label": 0
+  },
+  "rows_dropped_no_id_or_invalid_label": 0,
+  "duplicates_removed": {
+    "exact_rows": 0,
+    "repeated_session_id": 0
+  },
+  "invalid_values_set_to_nan": {
+    "Start_Hour": 0,
+    "Duration_Mins": 0,
+    "Energy_kWh": 0,
+    "Overstay_Mins": 0,
+    "Battery_Temp_C": 0
+  },
+  "median_imputation": {
+    "Start_Hour": {
+      "median": 11.0,
+      "values_filled": 0
+    },
+    "Duration_Mins": {
+      "median": 97.0,
+      "values_filled": 25
+    },
+    "Energy_kWh": {
+      "median": 13.28,
+      "values_filled": 35
+    },
+    "Overstay_Mins": {
+      "median": 0.0,
+      "values_filled": 0
+    },
+    "Battery_Temp_C": {
+      "median": 34.4,
+      "values_filled": 0
+    }
+  },
+  "rows_after": 1200,
+  "peak_rule": "Peak_Hour_Flag = 1 if 12 <= Start_Hour <= 17",
+  "efficiency_rule": "Power_kW tertiles within each Charger_Type (relative charging-rate proxy).",
+  "efficiency_thresholds_kW": [
+    {
+      "Charger_Type": "AC",
+      "Low_Medium_cut_kW": 5.572,
+      "Medium_High_cut_kW": 6.283
+    },
+    {
+      "Charger_Type": "DC",
+      "Low_Medium_cut_kW": 27.793,
+      "Medium_High_cut_kW": 31.86
+    }
+  ],
+  "missing_after": 0,
+  "columns_out": [
+    "Session_ID",
+    "Charger_Type",
+    "User_Type",
+    "Start_Hour",
+    "Duration_Mins",
+    "Energy_kWh",
+    "Overstay_Mins",
+    "Battery_Temp_C",
+    "Grid_Status_Label",
+    "Peak_Hour_Flag",
+    "Power_kW",
+    "Energy_Efficiency_Group"
+  ],
+  "data_notes": [
+    "Charger_Type values in the CSV are 'AC'/'DC' (brief: AC_Fast/DC_Ultra); kept as-is.",
+    "No Ambient_Temp_C column in the CSV; Battery_Temp_C used and labelled as such.",
+    "No Peak_Hour_Flag column in the CSV; derived from Start_Hour (12-17 inclusive)."
+  ]
+}

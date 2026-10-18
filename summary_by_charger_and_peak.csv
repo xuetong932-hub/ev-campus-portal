@@ -1,0 +1,5 @@
+Charger_Type,Peak_Hour_Flag,Sessions,Avg_Energy_kWh,Total_Energy_kWh,Avg_Battery_Temp_C,Avg_Duration_Mins,Avg_Power_kW
+AC,0,485,11.9,5770.78,32.04,119.56,6.0
+AC,1,299,11.62,3473.7,31.8,116.89,5.97
+DC,0,273,22.3,6086.67,40.62,46.16,29.38
+DC,1,143,23.07,3298.94,41.08,48.78,29.29

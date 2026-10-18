@@ -1,0 +1,7 @@
+,precision,recall,f1-score,support
+Normal,0.8641,0.8833,0.8736,180.0
+Overheated,0.9444,0.6538,0.7727,26.0
+Grid_Surge,0.4211,0.4706,0.4444,34.0
+accuracy,0.8,0.8,0.8,0.8
+macro avg,0.7432,0.6693,0.6969,240.0
+weighted avg,0.8101,0.8,0.8019,240.0
